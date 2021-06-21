@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <!--UTF-8-->
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <!--Favicon-->
+        <link rel="shortcut icon" href="Imagens/favicon.png"/>
+        <!--Responsividade -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1">  
+        <!--CSS-->
+        <link rel="stylesheet" type="text/css" href="CSS/telasForm.css">
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
+        
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+
+        <title>Casdastre deu pet</title>
+
+        <!--Scripts-->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+        
+        <!--Validação-->
+        <script type="text/javascript">
+            function validar(){
+                var nome = formuser.nome.value;
+                var email = formuser.email.value;
+                var senha = formuser.senha.value;
+                
+                if(nome == "" || nome.indexOf('@') == -1 ){
+                    alert('Preencha o campo E-mail.');
+                    formuser.nome.focus();
+                    return false;
+                }
+            }
+        </script>
+
+        <!--Imagem de fundo-->
+        <style>body{background-image: url(Imagens/fundoCoelho.png);}</style>
+</head>
+    </head>
+    <body>
+        <!--Menu-->
+        <nav class="navbar navbar-fixed-top navbar-dark" style="background-color: #fcd1c0">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#links-menu" style="background-color: white;">
+                        <i class="material-icons">menu</i>
+                    </button>
+                </div>
+                <nav id="links-menu" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="tabela.html">Lista de Vets</a></li>
+                        <li><a href="formulario.html">Cadastre seu pet</a></li>
+                        <li><a href="index.html">Logout</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </nav>
+
+        <!--Logotipo-->
+        <div class="logo">
+            <img src="Imagens/logoMenor.png"/>
+        </div>
+
+        <!--Chamada-->
+        <div class="chamada">
+            <h1>Seu pet bem cuidado!</h1>
+        </div>
+
+        <!--Formulário-->
+        <form class="tela" method="post" action="link" enctype="multipart/form-data" name="formuser" action="enviar.php">
+            <label for="nome">Nome do dono:</label>
+            <input type="text" id="txtNome" name="nome" placeholder="entre com o seu nome" required="required"/>
+            <label for="nome">Nome do pet:</label>
+            <input type="text" id="txtPet" name="senha" placeholder="entre com o nome do pet" pattern="^.{6,8}" title="sua senha deve ter entre 6 e 8 carcteres" required="required"/>     
+            
+            <!--Botão-->
+            <input type="submit" onclick="return validar()" id="botao">
+        </form>
+
+        <!--Rodapé-->
+        <footer>
+            <div class="rodape"></div>
+        </footer>
+    </body>
+</html>

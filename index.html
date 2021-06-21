@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <!--UTF-8-->
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <!--Favicon-->
+        <link rel="shortcut icon" href="Imagens/favicon.png"/>
+        <!--Responsividade -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1">  
+        <!--CSS-->
+        <link rel="stylesheet" type="text/css" href="CSS/telasLogin.css">
+        <!--Imagem de fundo-->
+        <style>body{background-image: url(Imagens/fundo.png);}</style>
+
+        <title>Projeto P1: Pet Lover</title>
+    </head>
+    <body>
+        <!--Cabeçalho-->
+        <header>
+            <div class="cabecalho">
+                <nav>
+                    Seja bem vindo!
+                </nav>
+            </div>
+        </header>
+
+        <!--Logotipo-->
+        <div class="logo">
+            <img src="Imagens/logo.png"/>
+        </div>
+
+        <!--Caixa de Login-->
+        <form class="tela" method="post" action="link" enctype="multipart/form-data">
+            <label for="login">login</label>
+            <input type="email" id="txtEmail" placeholder="entre com o seu e-mail" title="o email deve conter @" required="required"/>
+            <label for="senha">senha</label>
+            <input type="password" id="txtSenha" placeholder="entre com a senha" pattern="^.{6,8}" title="sua senha deve ter entre 6 e 8 carcteres" required="required"/>
+           
+            <button type="button" onclick="window.location='tabela.html'">Continuar</button>
+    </form>
+
+    <!--Caixa de Login
+    <form class="tela">	
+        <label for="login">login</label>			
+        <input type="email" id="txtEmail" placeholder="entre com o seu e-mail" title="o email deve conter @" required /><br/>
+        <label for="senha">senha</label>
+        <input type="password" id="txtData" placeholder="entre com a senha"  pattern="^.{6,8}" title="sua senha deve ter entre 6 e 8 carcteres" required /><br/>
+        <button type="submit" id="button" onclick="window.location='tabela.html'">Continuar</button>
+    </form>-->
+    
+
+        <!--Rodapé-->
+        <footer>
+            <div class="rodape">Fernanda Abarca</div>
+        </footer>
+    </body>
+</html>
